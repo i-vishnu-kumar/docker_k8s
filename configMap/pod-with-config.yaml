@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: pod-using-config
+    labels:
+        type: learn-k8s
+spec:
+    containers:
+        - name: config-user
+          image: nginx
+          env:
+            - name: MY_CR_ID
+              valueFrom:
+                    configMapKeyRef:
+                      name: config-map
+                      key: cr_id
+            - name: MY_TOKEN_KEY
+              valueFrom:
+                    configMapKeyRef:
+                      name: config-map
+                      key: token

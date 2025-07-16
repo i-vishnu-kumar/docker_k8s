@@ -1,7 +1,3 @@
-Sure. Here’s the corrected README.md content using triple backticks (```) for code blocks instead of ‘’‘:
-
-⸻
-
 
 # 📦 Python App in Docker + Kubernetes
 

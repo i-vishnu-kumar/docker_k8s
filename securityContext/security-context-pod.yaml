@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: pod-with-security-context
+    labels:
+        type: learn-k8s
+spec:
+    securityContext:
+        runAsUser: 1001
+    containers:
+        - name: secret-user
+          image: nginx
+          securityContext:
+            runAsUser: 1000
+            capabilities: #containers only at pod level
+                add: ["MAC-ADMIN"]

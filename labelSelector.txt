@@ -1,0 +1,24 @@
+To make a label
+
+Insert labels section in metadata and add labels as key value pair
+eg.,
+metadata:
+	name: labelled-pod
+	labels:
+		app: App1
+
+For selectors;
+kubectl get pods --selector app=App1
+
+
+Can also use annotations section for tool specifications
+metadata:
+        name: labelled-pod
+        labels:
+                app: App1
+	annotations:
+		buildVersion: 1.35
+
+
+For showing all labels
+kubectl get pods --show-labels

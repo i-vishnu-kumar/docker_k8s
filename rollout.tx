@@ -1,0 +1,7 @@
+kubectl rollout status deployment/my-deployment
+
+kubectl create -f deployment-defination.yaml --record
+
+kubectl rollout history deployment/my-deployment
+
+kubectl rollout undo deployment/my-deployment

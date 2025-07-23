@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: readiness-probe-pod
+  labels:
+      name: readiness-probe-pod
+spec:
+  containers:
+    - name: first-cont
+      image: nginx
+  readinessProbe:
+    httpGet:
+        path: /api/ready
+        port: 8080
+    initialDelaySeconds: 10
+    periodSeconds: 5
+    failureThreshold: 8
+# httpGet check is for a web server
+#For tcp check use (It is for a DB)
+# readinessProbe
+#   tcpSocket:
+#       port: 3306
+#For exec check use (For a container check or app)
+# readinessProbe:
+#   exec:
+#       command:
+#           - cat
+#           - /app/is_ready
+#
+# **For liveness probe; replace readinessProbe -> livenessProbe

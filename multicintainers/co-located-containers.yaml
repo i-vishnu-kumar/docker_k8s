@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: co-located-pod
+  labels:
+    name: co-located-pod
+spec:
+  containers:
+    - name: first-cont
+      image: nginx
+    - name: sec-cont
+      image: busybox

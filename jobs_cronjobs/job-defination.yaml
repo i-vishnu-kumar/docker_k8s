@@ -1,1 +1,14 @@
-hi
+apiVersion: batch/v1
+kind: Job
+metadata:
+    name: math-add-job
+spec:
+    completions: 3 #To run 3 pods for this job
+    parallelism: 3 #To run the 3 pods in parallel
+    template:
+        spec:
+            containers:
+                - name: adder-job
+                  image: ubuntu
+                  command: ["/bin/sh", "-c", "expr 2 + 2"]
+            restartPolicy: Never

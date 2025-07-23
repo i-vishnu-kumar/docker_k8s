@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: affinity-pod
+  name: affinity-pod
+spec:
+  containers:
+  - image: nginx
+    name: affinity-pod
+    resources: {}
+  affinity:
+    nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+            nodSelectorTerms:
+                - matchExpressions:
+                    - key: size
+                      operator: "In"
+                      values:
+                        - Large
+                        - Medium
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
+
+#Can also be done like thi
+#- matchExpressions:
+    #- key: size
+         # operator: "NotIn"
+          #values:
+           # - Small

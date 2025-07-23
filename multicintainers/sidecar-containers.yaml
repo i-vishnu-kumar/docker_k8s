@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sidecar-pod
+  labels:
+    name: sidecar-pod
+spec:
+  containers:
+    - name: first-cont
+      image: nginx
+  initContainers:
+    - name: sidecar-cont
+      image: busybox
+      restartPolicy: Always

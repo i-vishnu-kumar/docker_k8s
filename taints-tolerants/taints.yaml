@@ -1,0 +1,7 @@
+#kubectl taint nodes node-name key=value:taint-effect
+
+#Three kinds of taint-effect are: -
+#NoSchedule, PreferNoSchedule, NoExecute
+
+#Sample taint command
+#kubectl taint nodes nod1 app=blue:NoSchedule

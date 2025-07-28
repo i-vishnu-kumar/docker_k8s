@@ -1,0 +1,17 @@
+# To search helm hub for Any application
+helm search hub wordpress
+
+# For searching in other places say bitnami
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm search repo wordpress
+helm repo list 
+ 
+# For installing any release of helm
+helm install [release-name] [chart-name]
+
+#Other common commands
+helm list
+helm uninstall my-release
+helm pull --untar bitnami/wordpress #Not install just pull and unzip
+ls wordpress
+helm install release-4 ./wordpress

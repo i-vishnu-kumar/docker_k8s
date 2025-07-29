@@ -1,0 +1,7 @@
+apiversion: kustomize.config.k8s.io/v1beta1
+kind: Kustomize
+resources:
+    - api/api-depl.yaml
+    - api/api-service.yaml
+    - api2/api2-depl.yaml
+    - api2/api2-service.yaml

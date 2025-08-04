@@ -17,7 +17,8 @@ Whether you're revising concepts or practicing common configurations, this resou
 🎓 Reference Course
 This repository was created while following the highly recommended Udemy course:
 
-Kubernetes Certified Application Developer (CKAD) with Tests
+Kubernetes Certified Application Developer (CKAD) with Tests: https://rakutenmobile.udemy.com/course/certified-kubernetes-application-developer/
+
 Instructor: Mumshad Mannambeth
 
 Special thanks to KodeKloud and Mumshad Mannambeth for their excellent content and guidance.

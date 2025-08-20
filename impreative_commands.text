@@ -1,10 +1,10 @@
 kubectl run nginx --image=nginx (For pod)
-kubectl run nginx --image=nginx --restart=OnFailure (For Job)
-kubectl create cronjob nginx --image=nginx --schedule="* * * * *" (For CronJob)
 
 kubectl run nginx --image=nginx --restart=Never --port=80 --namespace=myNameSpace --serviceaccount=mysa --env=Hostname=local --labels=bu=finance,env=dev  --command --dry-run=client -o yaml -- /bin/sh -c 'echo hello world'
 
-kubectl run frontend --replicas=2 --labels=run=load-balancer-example --image=busybox --port=8080
+kubectl create deploy frontend --replicas=2 --image=busybox --port=8080
+
+kubectl exec -it -- ls -lrth (Run command inside pod)
 
 kubectl expose deployment frontend --type=NodePort --name=frontend-service --port=6262 --target-port=8080
 

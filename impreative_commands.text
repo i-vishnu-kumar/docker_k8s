@@ -4,6 +4,10 @@ kubectl run nginx --image=nginx --restart=Never --port=80 --namespace=myNameSpac
 
 kubectl create deploy frontend --replicas=2 --image=busybox --port=8080
 
+k set image deployment/prod-deployment -n development nginx=nginx:1.13.6 (Change image deployment)
+
+kubectl rollout undo deployment/prod-deployment -n development (Undo rollout deployment)
+
 kubectl exec -it -- ls -lrth (Run command inside pod)
 
 kubectl expose deployment frontend --type=NodePort --name=frontend-service --port=6262 --target-port=8080

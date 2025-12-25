@@ -8,6 +8,8 @@ kubectl run nginx --image=nginx --restart=Never --port=80 --namespace=myNameSpac
 
 kubectl create deploy frontend --replicas=2 --image=busybox --port=8080
 
+kubectl create deploy frontend --replicas=2 --image=busybox --port=8080 -- /bin/sh -c 'ls -lrth' (Adds command in deployment pods)
+
 k set image deployment/prod-deployment -n development nginx=nginx:1.13.6 (Change image deployment, and nginx is .spec.contianer.name)
 
 kubectl rollout undo deployment/prod-deployment -n development (Undo rollout deployment)

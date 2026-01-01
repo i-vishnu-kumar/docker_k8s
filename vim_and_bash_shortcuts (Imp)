@@ -12,8 +12,10 @@ Indent a line: > + > or < + <
 Indent 5 lines ahead: 5 + > + > 
 Indent all the lines downwards: 999999 + > + >
 Delete word from opposite end: shift + x
+Delete a word: daw
 
 ------------- bash --------------
+UP key (^) for previous commands.
 for i in {1..3}; do kubectl run nginx$i --image=nginx; done (To have a loop in bash)
 grep -i anything (Serach any character without being case sensative)
 k get pods | cut -f 1 -d ' ' (Will give the first row delimiting using ' ', try this after running the loop command)

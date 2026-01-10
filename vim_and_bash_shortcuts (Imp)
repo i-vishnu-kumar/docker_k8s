@@ -22,4 +22,4 @@ grep -i anything (Serach any character without being case sensative)
 k get pods | cut -f 1 -d ' ' (Will give the first row delimiting using ' ', try this after running the loop command)
 !k (Will run last command with k in it, '!k desc'; will also run last command with k in it, not the entire 'k desc')
 !?k desc? (Will run the last instance of command having 'k desc' in it
-
+export ingx='--image=nginx' export ibbx='--image=busybox' export doy='--dry-run=client -o yaml' #Use echo $ingx to see its content, and use this shorthand

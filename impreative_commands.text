@@ -1,3 +1,5 @@
+k config set-context --current --namespace=default (setup the namespace to save time)
+
 kubectl run nginx --image=nginx (For pod)
 
 k get pods --show-labels
@@ -31,5 +33,3 @@ kubectl create quota my-rq --namespace=one --hard=requests.cpu=1,requests.memory
 kubectl get pods --selector me=true --show-labels - to select the pods with a given label
 
 For encoding/decoding in secret files; echo -n admin | base64; echo -n YWRtaW4= | base64 -d 
-
-export ingx='--image=nginx' export ibbx='--image=busybox' export doy='--dry-run=client -o yaml' #Use echo $ingx to see its content, and use this shorthand

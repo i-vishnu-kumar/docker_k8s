@@ -19,6 +19,7 @@ UP key (^) for previous commands.
 for i in {1..3}; do kubectl run nginx$i --image=nginx; done (To have a loop in bash)
 grep anything (for exact matches and also use like 'Image:' to be more specific with the ratio sign in yaml)
 grep -i anything (Serach any character without being case sensative)
+egrep -i 'anything1|anythng2' (Will search for things containing anything1 and anything2) 
 k get pods | cut -f 1 -d ' ' (Will give the first row delimiting using ' ', try this after running the loop command)
 !k (Will run last command with k in it, '!k desc'; will also run last command with k in it, not the entire 'k desc')
 !?k desc? (Will run the last instance of command having 'k desc' in it

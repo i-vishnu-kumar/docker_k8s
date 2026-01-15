@@ -16,6 +16,8 @@ Delete a word: daw
 
 ------------- bash --------------
 UP key (^) for previous commands.
+echo anything > file.txt (Write "anything" in file.txt in write mode similar to 'w' mode in python)
+echo anything2 >> file.txt (Append "anything2" in file.txt in append mode, similar to 'a' mode in python)
 for i in {1..3}; do kubectl run nginx$i --image=nginx; done (To have a loop in bash)
 grep anything (for exact matches and also use like 'Image:' to be more specific with the ratio sign in yaml)
 grep -i anything (Serach any character without being case sensative)

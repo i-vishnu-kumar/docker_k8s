@@ -24,9 +24,15 @@ kubectl expose deployment frontend --type=NodePort --name=frontend-service --por
 
 k taint node my-node tier=frontend:NoSchedule (Always apply NoSchedule or things while taint)
 
-kubectl set serviceaccount deployment frontend myuser
+kubectl set sa deployment frontend myuser
 
 kubectl create service clusterip my-cs --tcp=5678:8080 --dry-run -o yaml
+
+k auth can-i list pods --as=system:serviceaccount:namespace:serviceaccountname
+
+k create role -h
+
+k create rolebinding -h
 
 kubectl create quota my-rq --namespace=one --hard=requests.cpu=1,requests.memory=1Gi,limits.cpu=2,limits.memory=2Gi  #Making quotas
 

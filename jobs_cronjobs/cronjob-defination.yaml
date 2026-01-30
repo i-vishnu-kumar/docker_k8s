@@ -4,6 +4,8 @@ metadata:
     name: reporting-cron-job
 spec:
     schedule: "*/1 * * * *"
+    successfulJobsHistoryLimit: 19 #To save successful execution jobs
+    failedJobsHistoryLimit: 10  #To save the failure jobs
     jobTemplate:
         spec:
             completions: 3 #To run 3 pods for this job
